@@ -60,6 +60,7 @@ const UpdatePerson = props => {
       firstName: firstName,
       lastName: lastName
     }}
+    style={{display: 'flex', flexFlow: 'row wrap', justifyContent: 'center', marginTop: '20px'}}
     >
       <Form.Item
       name='firstName'
