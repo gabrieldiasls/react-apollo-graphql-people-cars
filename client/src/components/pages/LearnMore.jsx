@@ -42,7 +42,7 @@ const LearnMore = (props) => {
   return (
     <div>
       <div style={{ marginBottom: "20px" }}>
-        <Link to="/">← GO BACK HOME</Link>
+        <Link to="/">HOME</Link>
       </div>
       <Card title={[`${person.firstName} ${person.lastName}`]}>
         <List
