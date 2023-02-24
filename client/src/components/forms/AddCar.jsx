@@ -63,9 +63,9 @@ const AddCar = () => {
         onFinish={onFinish}
         size="large"
         style={{
-          marginBottom: "40px",
+          marginBottom: "20px",
           display: "flex",
-          flexFlow: "row nowrap",
+          flexFlow: "row wrap",
           justifyContent: "center"
         }}
       >
@@ -79,7 +79,7 @@ const AddCar = () => {
             },
           ]}
         >
-          <Input placeholder="Year" />
+          <Input placeholder="Year" style={{width: "100px", marginBottom: "20px"}}/>
         </Form.Item>
 
         <Form.Item
@@ -92,7 +92,7 @@ const AddCar = () => {
             },
           ]}
         >
-          <Input placeholder="Make" />
+          <Input placeholder="Make" style={{width: "150px", marginBottom: "20px"}}/>
         </Form.Item>
 
         <Form.Item
@@ -105,7 +105,7 @@ const AddCar = () => {
             },
           ]}
         >
-          <Input placeholder="Model" />
+          <Input placeholder="Model" style={{width: "150px", marginBottom: "20px"}}/>
         </Form.Item>
 
         <Form.Item
@@ -118,7 +118,7 @@ const AddCar = () => {
             },
           ]}
         >
-          <Input placeholder="Price" />
+          <Input placeholder="Price" style={{width: "100px", marginBottom: "20px"}}/>
         </Form.Item>
 
         <Form.Item name="personId" label="Person" rules={[{ required: true }]}>
