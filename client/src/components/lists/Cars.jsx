@@ -19,11 +19,11 @@ const Cars = (props) => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
-  const filteredCars = data.cars.filter((car) => car.personId === props.id);
+  const listCars = data.cars.filter((car) => car.personId === props.id);
 
   return (
     <List grid={{ gutter: 20, column: 1 }} style={{ justifyContent: "center" }}>
-      {filteredCars.map(({ id, year, make, model, price, personId }) => (
+      {listCars.map(({ id, year, make, model, price, personId }) => (
         <List.Item key={id}>
           <CarCard
             key={id}

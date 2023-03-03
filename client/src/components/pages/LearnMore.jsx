@@ -31,16 +31,16 @@ const LearnMore = (props) => {
     data: carData,
   } = useQuery(GET_CARS);
 
-  if (personLoading) return "Loading";
-  if (carLoading) return "Loading";
+  if (personLoading) return "Loading people...";
+  if (carLoading) return "Loading cars...";
   if (personError) return `Error! ${personError.message}`;
   if (carError) return `Error! ${carError.message}`;
 
   const person = personData.person;
-  const filteredCars = carData.cars.filter((car) => car.personId === id);
+  const listCars = carData.cars.filter((car) => car.personId === id);
 
   return (
-    <div>
+    <div style={{width: '95%', margin: '1rem'}}>
       <div style={{ marginBottom: "20px" }}>
         <Link to="/">HOME</Link>
       </div>
@@ -49,7 +49,7 @@ const LearnMore = (props) => {
           grid={{ column: 1 }}
           style={{ justifyContent: "center" }}
         >
-          {filteredCars.map(({ id, year, make, model, price, personId }) => (
+          {listCars.map(({ id, year, make, model, price, personId }) => (
             <List.Item key={id}>
               <CarCard
                 key={id}

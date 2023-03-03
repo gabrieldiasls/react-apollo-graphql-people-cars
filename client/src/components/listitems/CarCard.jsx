@@ -15,7 +15,7 @@ const CarCard = (props) => {
   const [make, setMake] = useState(props.make);
   const [model, setModel] = useState(props.model);
   const [price, setPrice] = useState(props.price);
-  const [personId, setPersonId] = useState(props.personId);
+  const [, setPersonId] = useState(props.personId);
   const [editMode, setEditMode] = useState(false);
 
   const onClick = () => setEditMode(!editMode);

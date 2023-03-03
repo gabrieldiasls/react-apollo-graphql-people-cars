@@ -48,28 +48,20 @@ const UpdateCar = (props) => {
 
   const updateStateVariable = (variable, value) => {
     props.updateStateVariable(variable, value);
-    switch (variable) {
-      case "year":
-        setYear(value);
-        break;
-      case "make":
-        setMake(value);
-        break;
-      case "model":
-        setModel(value);
-        break;
-      case "price":
-        setPrice(value);
-        break;
-      case "personId":
-        setPersonId(value);
-        break;
-      default:
-        break;
+    if (variable === "year") {
+      setYear(value);
+    } else if (variable === "make") {
+      setMake(value);
+    } else if (variable === "model") {
+      setModel(value);
+    } else if (variable === "price") {
+      setPrice(value);
+    } else if (variable === "personId") {
+      setPersonId(value);
     }
   };
 
-  if (loading) return <p>Loading</p>;
+  if (loading) return <p>Loading page</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (

@@ -8,9 +8,6 @@ const getStyles = () => ({
     fontWeight: "bold",
     textAlign: "center",
   },
-  divider: {
-    width: "30",
-  },
 });
 
 const Title = () => {
@@ -19,7 +16,7 @@ const Title = () => {
   return (
     <>
       <h1 style={styles.title}>PEOPLE AND THEIR CARS</h1>
-      <Divider style={styles.divider} />
+      <Divider />
     </>
   );
 };
